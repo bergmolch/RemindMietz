@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:RemindMietz" x:Class="RemindMietz.MainPage">
+    <Grid
+        RowSpacing="1"
+        ColumnSpacing="1"
+        Margin="10" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        
+        <Label 
+            BackgroundColor="Silver"
+            Grid.Row="0" 
+            Grid.ColumnSpan="2" 
+            Text="{Binding Date, StringFormat='{0: dd.MM.yyyy HH:mm:ss}'}"
+            FontSize="30"
+            VerticalTextAlignment="Center"
+            HorizontalTextAlignment="Center"/>
+        <Label 
+            BackgroundColor="Silver"
+            Grid.Row="1" 
+            Grid.Column="0"
+            Text="🍗"
+            FontSize="30"
+            VerticalTextAlignment="Center"
+            HorizontalTextAlignment="Center"/>
+        <Label
+            BackgroundColor="Silver"
+            Grid.Row="1" 
+            Grid.Column="1"
+            Text="💩"
+            FontSize="30"           
+            VerticalTextAlignment="Center"
+            HorizontalTextAlignment="Center"/>
+        <Grid 
+            RowSpacing="1"
+            ColumnSpacing="1"
+            Grid.Row="2"
+            Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            
+        <Label
+            BackgroundColor="Silver"
+            Grid.Row="0" 
+            Grid.Column="0"
+            Text="☀"
+            FontSize="40"           
+            VerticalTextAlignment="Center"
+            HorizontalTextAlignment="Center"/>
+        <Switch    
+            BackgroundColor="Silver"
+            Grid.Row="0" 
+            Grid.Column="1"   
+            IsToggled="{Binding Food1}"
+            HorizontalOptions="Center"/>
+          <Label
+            BackgroundColor="Silver"
+            Grid.Row="1" 
+            Grid.Column="0"
+            Text="🌙"
+            FontSize="40"           
+            VerticalTextAlignment="Center"
+            HorizontalTextAlignment="Center"/>
+        <Switch    
+            BackgroundColor="Silver"
+            Grid.Row="1" 
+            Grid.Column="1"   
+            IsToggled="{Binding Food2}"
+            HorizontalOptions="Center"/>
+        </Grid>
+        
+        <BoxView Grid.Row="2" Grid.Column="1" BackgroundColor="Silver" />
+
+        <StackLayout Grid.Row="2" Grid.Column="1"
+                     VerticalOptions="CenterAndExpand"
+                     HorizontalOptions="CenterAndExpand">
+      
+            <Switch    
+            Scale="2"
+            IsToggled="{Binding Shit}"
+            BackgroundColor="Silver"/>
+        </StackLayout>
+
+    </Grid>
+</ContentPage>
